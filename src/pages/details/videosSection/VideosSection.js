@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import "./style.scss";
 
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
-import { PlayIcon } from "../PlayIcon";
-import VideoPopup from "../../../components/videoPop/VideoPopUp";
-import Img from "../../../components/lazyLoadImage/Img";
+import ContentWrapper from "../../../components/contentWrapper/contentwrapper";
+import { PlayIcon } from "../playicon";
+import VideoPopup from "../../../components/videoPop/videopopup";
+import Img from "../../../components/lazyLoadImage/img";
 
 const VideosSection = ({ data, loading }) => {
   const [show, setShow] = useState(false);

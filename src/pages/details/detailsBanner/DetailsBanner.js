@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+import ContentWrapper from "../../../components/contentWrapper/contentwrapper";
 import useFetch from "../../../hooks/useFetch";
-import Genres from "../../../components/genres/Genres";
-import CircleRating from "../../../components/circleRating/CircleRating";
-import Img from "../../../components/lazyLoadImage/Img";
+import Genres from "../../../components/genres/genres";
+import CircleRating from "../../../components/circleRating/circlerating";
+import Img from "../../../components/lazyLoadImage/img";
 import PosterFallback from "../../../assets/no-poster.png";
-import VideoPopup from "../../../components/videoPop/VideoPopUp";
-import { PlayIcon } from "../PlayIcon";
+import VideoPopup from "../../../components/videoPop/videopopup";
+import { PlayIcon } from "../playicon";
 
 import "./style.scss";
 
