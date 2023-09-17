@@ -7,6 +7,7 @@ import TopRated from "./topRated/TopRated";
 
 
 const Home = () => {
+  // console.log('Home');
   return (
       <div className="homePage">
         <HeroBanner/>
