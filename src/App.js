@@ -27,7 +27,7 @@ function App() {
   const fetchApiConfig = async()=>{
     // try { 
       const res = await fetchDataFromAPI("/configuration");
-      console.log(res);
+      // console.log(res);
 
       const url = {
         backdrop: res.images.secure_base_url+"original",
@@ -57,7 +57,7 @@ const genresCall = async()=>{
     });
   });
   dispatch(getGenres(allGenres));
-  console.log(allGenres);
+  // console.log(allGenres);
 }
 
   return (

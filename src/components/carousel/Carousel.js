@@ -12,24 +12,35 @@ import Img from "../lazyLoadImage/Img";
 import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
 
-import "./style.scss";
+import "./style.scss";          
 
 const Carousel = ({ data, loading, endpoint }) => {
+console.log(endpoint,loading)
+
+
+
   const carouselContainer = useRef();
+  console.log(carouselContainer);
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
 
   const navigation = (dir) => {
-    const container = carouselContainer.current;
-    const scrollAmount =
-      dir === "left"
-        ? container.scrollLeft - (container.offsetWidth + 20)
-        : container.scrollLeft + (container.offsetWidth + 20);
+    try{
+      const container = carouselContainer.current;
+      const scrollAmount =
+        dir === "left"
+          ? container.scrollLeft - (container.offsetWidth + 20)
+          : container.scrollLeft + (container.offsetWidth + 20);
 
-    container.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
+      container.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+  }
+  catch(err){
+    console.log(err)
+    
+  }
   };
 
   const skItem = () => {
@@ -68,7 +79,7 @@ const Carousel = ({ data, loading, endpoint }) => {
                 <div
                   key={item.id}
                   className="carouselItem"
-                  onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)}
+                  onClick={() => navigate(`/${endpoint}/${item.id}`)}
                 >
                   <div className="posterBlock">
                     <Img src={posterUrl} />
