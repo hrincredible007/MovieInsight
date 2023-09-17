@@ -4,14 +4,16 @@ import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import fetchDataFromAPI from "./utils/api";
 
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import Home from './pages/home/Home';
+import Home from './pages/home/Home'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import Details from './pages/details/Details'
+import SearchResult from './pages/searchResult/SearchResult'
 
-import Details from './pages/details/Details';
-import Explore from './pages/explore/explore';
-import PageNotFound from './pages/404/PageNotFound';
-import SearchResult from "./pages/searchResult/searchresult.js";
+import Explore from './pages/explore/Explore'
+
+import PageNotFound from './pages/404/pagenotfound'
+
 
 
 function App() {
@@ -64,7 +66,7 @@ const genresCall = async()=>{
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/" element = {<Home/>}></Route>
+        <Route path="/" element = {<Home></Home>}></Route>
         <Route path="/:mediaType/:id" element = {<Details/>}></Route>
         <Route path="/search/:query" element = {<SearchResult></SearchResult>}></Route>
         <Route path="/explore/:mediaType" element = {<Explore/>}></Route>

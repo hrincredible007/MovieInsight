@@ -6,7 +6,7 @@ import {
     FaLinkedin,
 } from "react-icons/fa";
 
-import ContentWrapper from "../contentWrapper/contentwrapper";
+import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./style.scss";
 
