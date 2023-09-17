@@ -12,7 +12,6 @@ const Cast = ({ data, loading }) => {
     const dataDemo = data?.filter((item)=> item?.id === 1509997);
     // console.log(data)
     
-    console.log(dataDemo)
     
     const skeleton = () => {
         return (

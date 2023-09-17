@@ -4,6 +4,7 @@ import useFetch from '../../hooks/useFetch'
 import './style.scss'
 import DetailsBanner from './detailsBanner/DetailsBanner'
 import Cast from './Cast/Cast'
+import VideosSection from './videosSection/VideosSection'
 
 const Details = () => {
 
@@ -13,7 +14,7 @@ const Details = () => {
   // const trailerD = data?.results.filter()
   
   const dataTrailer = dataW?.filter((d)=> d?.name === 'Official Trailer');
-  // console.log(dataTrailer);
+  console.log(data);
   
   const { data: credits, loading: creditsLoading} = useFetch(`/${mediaType}/${id}/credits`); 
   
@@ -28,7 +29,8 @@ const Details = () => {
         video={dataTrailer?.length === 0 ? dataW?.[0]: dataTrailer?.[0]}
         // video={data?.results?.[0]}
         crew = {credits?.crew}/>
-      <Cast data={credits?.cast} loading={creditsLoading}></Cast>
+      <Cast data={credits?.cast} loading={creditsLoading}/>
+      <VideosSection data={data} loading={loading}/>
 
     </div>
   )
