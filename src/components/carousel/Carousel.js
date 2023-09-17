@@ -15,13 +15,13 @@ import Genres from "../genres/Genres";
 import "./style.scss";          
 
 const Carousel = ({ data, loading, endpoint, title}) => {
-console.log(endpoint,loading)
+// console.log(endpoint,loading)
 
 // console.log("Title",title);
 
 
   const carouselContainer = useRef();
-  console.log(carouselContainer);
+  // console.log(carouselContainer);
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
 

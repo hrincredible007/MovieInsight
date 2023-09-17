@@ -20,7 +20,7 @@ const HeroBanner = () => {
       const bg =
         url.backdrop +
         data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
-      console.log(bg);
+      // console.log(bg);
       setBackground(bg);
     } catch (error) {
       console.log(error);

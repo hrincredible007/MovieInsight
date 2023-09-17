@@ -14,10 +14,8 @@ const Details = () => {
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`); 
   const dataW = data?.results;
   // const trailerD = data?.results.filter()
-  console.log(mediaType, "\t\t", id)
   
   const dataTrailer = dataW?.filter((d)=> d?.name === 'Official Trailer');
-  console.log(data);
   
   const { data: credits, loading: creditsLoading} = useFetch(`/${mediaType}/${id}/credits`); 
   
