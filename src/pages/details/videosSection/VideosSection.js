@@ -22,6 +22,7 @@ const VideosSection = ({ data, loading }) => {
   };
 
   return (
+    (data?.results?.length !==0) &&
     <div className="videosSection">
       <ContentWrapper>
         <div className="sectionHeading">Official Videos</div>
@@ -36,7 +37,7 @@ const VideosSection = ({ data, loading }) => {
                 }}
                 className="videoItem"
               >
-                <div className="videoThumbnail">
+                <div className="videoThumbnail">{console.log(`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`)}
                   <Img
                     src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`}
                   />

@@ -14,9 +14,10 @@ import Genres from "../genres/Genres";
 
 import "./style.scss";          
 
-const Carousel = ({ data, loading, endpoint }) => {
+const Carousel = ({ data, loading, endpoint, title}) => {
 console.log(endpoint,loading)
 
+// console.log("Title",title);
 
 
   const carouselContainer = useRef();
@@ -57,8 +58,10 @@ console.log(endpoint,loading)
   };
 
   return (
+  // ( data?.length !== 0 &&
     <div className="carousel">
       <ContentWrapper>
+        {title && <div className="carouselTitle">{title}</div>}
         <BsFillArrowLeftCircleFill
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
@@ -72,8 +75,8 @@ console.log(endpoint,loading)
         {!loading ? (
           <div className="carouselItems" ref={carouselContainer}>
             {data?.map((item) => {
-              const posterUrl = item.poster_path
-                ? url.poster + item.poster_path
+              const posterUrl = item?.poster_path
+                ? url.poster + item?.poster_path
                 : PosterFallback;
               return (
                 <div

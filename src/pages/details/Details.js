@@ -5,6 +5,8 @@ import './style.scss'
 import DetailsBanner from './detailsBanner/DetailsBanner'
 import Cast from './Cast/Cast'
 import VideosSection from './videosSection/VideosSection'
+import Similar from './carousels/Similar'
+import Recommendation from './carousels/Recommendation'
 
 const Details = () => {
 
@@ -12,6 +14,7 @@ const Details = () => {
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`); 
   const dataW = data?.results;
   // const trailerD = data?.results.filter()
+  console.log(mediaType, "\t\t", id)
   
   const dataTrailer = dataW?.filter((d)=> d?.name === 'Official Trailer');
   console.log(data);
@@ -31,7 +34,8 @@ const Details = () => {
         crew = {credits?.crew}/>
       <Cast data={credits?.cast} loading={creditsLoading}/>
       <VideosSection data={data} loading={loading}/>
-
+      <Similar mediaType={mediaType} id={id} />
+      <Recommendation  mediaType={mediaType} id={id}/>
     </div>
   )
 }

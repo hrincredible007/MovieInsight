@@ -9,7 +9,6 @@ import avatar from "../../../assets/avatar.png";
 
 const Cast = ({ data, loading }) => {
     const { url } = useSelector((state) => state.home);
-    const dataDemo = data?.filter((item)=> item?.id === 1509997);
     // console.log(data)
     
     
@@ -23,6 +22,8 @@ const Cast = ({ data, loading }) => {
         );
     };
     return (
+        
+    (data?.length !==0) &&
         <div className="castSection">
             <ContentWrapper> 
                 <div className="sectionHeading">Top Cast</div>
