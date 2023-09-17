@@ -10,7 +10,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./style.scss";
 
-const Footer = () => {
+const footer = () => {
     return (
         <footer className="footer">
             <ContentWrapper>
@@ -48,4 +48,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default footer;

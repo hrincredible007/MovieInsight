@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import fetchDataFromAPI from "./utils/api";
 
 import Header from './components/header/header';
-import Footer from './components/footer/Footer';
+import Footer from './components/footer/footer';
 import Home from './pages/home/Home';
 
 import Details from './pages/details/Details';
