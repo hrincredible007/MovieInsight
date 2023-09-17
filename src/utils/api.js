@@ -2,6 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_TOKEN = process.env.REACT_APP_API_KEY;
+console.log(API_TOKEN);
 
 const headers = {
        'Content-Type': 'application/json',
