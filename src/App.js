@@ -4,7 +4,7 @@ import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import fetchDataFromAPI from "./utils/api";
 
-import Header from './components/header/Header';
+import Header from './components/header/header';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 
